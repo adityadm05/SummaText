@@ -19,11 +19,12 @@ services:
   # -------------------------------------------------------------
   # Frontend: React Vite Static Site (Free Tier, 0ms Cold Start)
   # -------------------------------------------------------------
-  - type: static
+  - type: web
     name: summatext-frontend
+    runtime: static
     rootDir: frontend
     buildCommand: npm install && npm run build
-    staticPublishPath: ./dist
+    staticPublishPath: dist
     routes:
       - type: rewrite
         source: /*
